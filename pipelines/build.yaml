@@ -1,5 +1,5 @@
 steps:
-  - name: 'gcr.o/cloud-builders/docker'
+  - name: 'gcr.io/cloud-builders/docker'
     args: ['build', '-t','gcr.io/${_FIREBASE_PROJECT_ID}/firebase', './dockerfiles/firebase']  
   - name: 'node:16.10'  
     entrypoint: 'npm'
