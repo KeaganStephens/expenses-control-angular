@@ -4,6 +4,8 @@ import { SigninComponent } from './signin.component';
 import {MatInputModule} from '@angular/material/input';
 import { Route, RouterModule, Routes } from '@angular/router';
 import {MatButtonModule} from '@angular/material/button';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { ReactiveFormsModule } from '@angular/forms';
 
 const routes: Routes = [
   {
@@ -18,7 +20,9 @@ const routes: Routes = [
   ],
   imports: [
     MatInputModule,
+    ReactiveFormsModule,
     MatButtonModule,
+    MatFormFieldModule,
     CommonModule,
     RouterModule.forChild(routes)
   ]
