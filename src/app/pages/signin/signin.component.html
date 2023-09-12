@@ -12,7 +12,11 @@
       <div class="aligned-to-right"> 
         <button mat-button class="recoverP" test-id="recover-password-button" [disabled]="!form.get('email')!.valid">Recover password</button>
       </div>
-      <button mat-raised-button color="primary" [disabled]="!form!.valid">Login</button>
+      <button mat-raised-button color="primary" [disabled]="!form!.valid"
+      (click)="login()"
+      *ngIf="!isLoginIn"
+      >Login</button>
+      <button mat-raised-button color="primary" test-id="login-loader" *ngIf="isLoginIn"><mat-spinner class="custom-spinner" diameter="20" ></mat-spinner></button>
       <button mat-stroked-button color="primary">Register</button>
     </form>
 </main>  
